@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to HDS</h1>
+        <p class="lead">We are excited to have you here!</p>
+        <hr class="my-4">
+        <p>Use the navigation menu to explore our website.</p>
+        <a class="btn btn-primary btn-lg mb-2 d-block" href="{% url 'arrival' %}" role="button">Go to Arrival Form</a>
+        <a class="btn btn-secondary btn-lg mb-2 d-block" href="{% url 'departure' %}" role="button">Go to Departure Form</a>
+        <a class="btn btn-info btn-lg d-block" href="{% url 'active_drivers' %}" role="button">View Active Drivers</a>
+    </div>
+</div>
+{% endblock %}

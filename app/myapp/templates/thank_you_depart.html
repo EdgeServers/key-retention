@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank You for Departing{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="mb-4">Thank You!</h1>
+            <p class="lead">Dear driver, your departure has been successfully recorded.</p>
+            <h3>Key Hanger Number</h3>
+            <h2 style="font-size: 50px; font-weight: bold; color: #28a745;">{{ key_hanger_number }}</h2>
+            <p class="mt-4" style="font-size: 1.2rem;">
+                Please take your key and make sure to unchock your truck/van before you move. 
+                We appreciate your cooperation and wish you a safe journey!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Active Drivers{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-4" style="font-size: 2.5rem;">Active Drivers</h2>
+            <div class="table-responsive">
+                <table id="dataTable" class="table table-striped table-bordered table-hover table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th style="font-size: 1.2rem;">Name</th>
+                            <th style="font-size: 1.2rem;">Rego</th>
+                            <th style="font-size: 1.2rem;">Key Hanger</th>
+                            <th style="font-size: 1.2rem;">Parking Location</th>
+                            <th style="font-size: 1.2rem;">Arrived</th>
+                        </tr>
+                    </thead>
+                    <tbody id="driverTableBody">
+                        {% for driver in drivers %}
+                        <tr>
+                            <td>{{ driver.name }}</td>
+                            <td>{{ driver.truck_rego_number }}</td>
+                            <td>{{ driver.key_hanger_number.hanger_number }}</td>
+                            <td>{{ driver.parking_location.name }}</td>
+                            <td>{{ driver.arrival_time|timesince }} ago</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center" style="font-size: 1.1rem;">No active drivers</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to reload the page
+    function reloadPage() {
+        location.reload();
+    }
+
+    // Reload the page after 5 seconds
+    setTimeout(reloadPage, 5000);
+</script>
+
+{% endblock %}

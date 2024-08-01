@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank You{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="mb-4">Thank You!</h1>
+            <p class="lead">Dear driver, please make sure to hang your key at the below key hanger number.</p>
+            <h2 style="font-size: 90px; font-weight: bold; color: #0552a5;">{{ key_hanger_number }}</h2>
+            <p class="mt-4">We appreciate your cooperation. Safe Loading or unloading!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
