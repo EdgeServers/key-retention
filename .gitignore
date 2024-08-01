@@ -275,3 +275,8 @@ dump.rdb
 key_retention_project/media/
 
 .pytest_cache/
+
+### Migrations ###
+**/migrations/*
+**/migrations/__init__.py
+
